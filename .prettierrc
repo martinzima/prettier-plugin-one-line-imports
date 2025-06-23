@@ -1,0 +1,6 @@
+{
+  "singleQuote": true,
+  "bracketSameLine": true,
+  "trailingComma": "none",
+  "plugins": ["prettier-plugin-one-line-imports"]
+}

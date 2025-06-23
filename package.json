@@ -1,0 +1,51 @@
+{
+  "name": "prettier-plugin-one-line-imports",
+  "version": "1.0.0",
+  "description": "A Prettier plugin to always force TypeScript imports on one line (and get rid of these ugly multi-line statements spanning half your screen).",
+  "author": "Martin Zima",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinzima/prettier-plugin-one-line-imports"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "rolldown -c",
+    "test": "vitest",
+    "clean": "del dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "typescript",
+    "plugin",
+    "formatting",
+    "code style",
+    "imports"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "@types/prettier": "^2.7.3",
+    "del-cli": "^6.0.0",
+    "prettier": "^3.6.0",
+    "rolldown": "^1.0.0-beta.19",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  },
+  "packageManager": "pnpm@10.12.2+sha512.a32540185b964ee30bb4e979e405adc6af59226b438ee4cc19f9e8773667a66d302f5bfee60a39d3cac69e35e4b96e708a71dd002b7e9359c4112a1722ac323f"
+}
