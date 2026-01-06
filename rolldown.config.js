@@ -15,4 +15,5 @@ export default defineConfig({
   resolve: {
     extensions: [".ts"],
   },
+  external: ["prettier", /^prettier\//],
 });

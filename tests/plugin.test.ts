@@ -92,4 +92,21 @@ function someFunction() {
 
     expect(await format(input)).toBe(expected);
   });
+
+  it("should handle files with inline comments in non-import code (issue #3)", async () => {
+    const input = `export class TerminalRepo {
+  constructor() {
+    // nothing to see here
+  }
+
+  parseWWWAuthenticate(authHeader: string): void {
+    // are you okay?
+    return;
+  }
+}`;
+
+    const expected = `export class TerminalRepo {\n  constructor() {\n    // nothing to see here\n  }\n\n  parseWWWAuthenticate(authHeader: string): void {\n    // are you okay?\n    return;\n  }\n}\n`;
+
+    expect(await format(input)).toBe(expected);
+  });
 });
