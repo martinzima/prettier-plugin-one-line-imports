@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-one-line-imports",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Prettier plugin to always force TypeScript imports on one line (and get rid of these ugly multi-line statements spanning half your screen).",
   "author": "Martin Zima",
   "license": "MIT",

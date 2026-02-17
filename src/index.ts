@@ -1,10 +1,10 @@
 import type { Plugin, Parser, Printer, SupportLanguage, SupportOption, AstPath, Doc, ParserOptions } from 'prettier';
+import { version as prettierVersion } from 'prettier';
 import { printers as estreePrinters } from 'prettier/plugins/estree';
 import { parsers as typescriptParsers } from 'prettier/plugins/typescript';
 
 // Compatibility check for Prettier version >= 3
 try {
-  const prettierVersion = require('prettier/package.json').version;
   const majorVersion = parseInt(prettierVersion.split('.')[0], 10);
   if (majorVersion < 3) {
     throw new Error(
